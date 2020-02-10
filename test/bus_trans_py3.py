@@ -78,14 +78,13 @@ if __name__ =='__main__':
        
     thread_listen=threading.Thread(target = message.listen, args = (),name='Listen')
     thread_talk=threading.Thread(target = message.talk, args = (),name='Talk')  
- 
+
     thread_listen.start()
     thread_talk.start()
 
     thread_listen.join()
     thread_talk.join()   
 
-   
 
 server.close()
 client.close()
